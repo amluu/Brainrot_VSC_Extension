@@ -165,14 +165,17 @@ async function generateBrainrotComment(codeContext: string, language: string, co
     apiKey: apiKey,
   });
   
-  const prompt = `You are a software commenter that generates short, gen-z and brainrot style given a code snippet. 
+  const prompt = `You are a gen z software engineer that generates short, sarcastic, and sometimes mean brainrot-style given a code snippet. 
 
 A "brainrot" comment is:
-- Very short (ideally 1-10 words, max 20 words)
-- Humorous, silly, or absurd
+- Very short (ideally 1-10 words)
+- Sarcastic, mean, or absurd
 - Contextually relevant to the code
-- In internet/slang style (like "no cap", "fr fr", "that's wild", "literally me", etc.)
-- Should make developers chuckle
+
+Here are some examples of brainrot comments:
+- "we got O(n^2) loops before GTA 6"
+- "why this token validation looking kinda sus"
+- "wait... hol up this ain't bussin at all"
 
 Generate a brainrot comment for this ${language} code:
 
@@ -186,6 +189,7 @@ Return ONLY the comment text itself, without any code comment syntax (no //, #, 
     const message = await anthropic.messages.create({
       model: 'claude-sonnet-4-5-20250929',
       max_tokens: 50,
+      temperature: 1,
       messages: [
         {
           role: 'user',
@@ -193,7 +197,6 @@ Return ONLY the comment text itself, without any code comment syntax (no //, #, 
         }
       ]
     });
-    
     const responseText = message.content[0].type === 'text' 
       ? message.content[0].text.trim() 
       : '';
