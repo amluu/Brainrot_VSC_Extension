@@ -2,6 +2,8 @@
 
 generate brainrot comments that will roast the quality of your code
 
+for claude builder club hackathon
+
 ## ai slop below:
 
 ## Installation
