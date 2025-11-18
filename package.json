@@ -1,7 +1,7 @@
 {
   "name": "brainrot-comment",
   "displayName": "Brainrot Comment",
-  "description": "Automatically inserts 'Brainrot comment' at the beginning of the current line",
+  "description": "Insert brainrot comments into your code",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
@@ -22,7 +22,7 @@
       },
       {
         "command": "brainrot.setApiKey",
-        "title": "Set Brainrot API Key"
+        "title": "Set Brainrot Anthropic API Key"
       }
     ],
     "keybindings": [
