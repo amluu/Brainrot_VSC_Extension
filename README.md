@@ -1,18 +1,8 @@
 # Brainrot Comment Extension
 
-A VS Code extension that automatically inserts "Brainrot comment" at the beginning of the current line with the appropriate comment syntax for the file type.
+generate brainrot comments that will roast the quality of your code
 
-## Features
-
-- Press `Ctrl+Shift+C` (or `Cmd+Shift+C` on Mac) to insert a brainrot comment
-- Automatically detects the correct comment syntax based on file type:
-  - `//` for JavaScript, TypeScript, C, C++, Java, C#, etc.
-  - `#` for Python, Shell, Ruby, YAML, etc.
-  - `<!-- -->` for HTML/XML
-  - `--` for SQL, Lua
-  - `/* */` for CSS
-- Preserves indentation when inserting comments
-- Works with multi-cursor selections
+## ai slop below:
 
 ## Installation
 
